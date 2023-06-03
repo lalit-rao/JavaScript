@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1>Functions in Javascript</h1>
+<script>
+    function doStuff() {
+        var myString = "This is a function";
+        var newString = myString.toUpperCase();
+        console.log(myString);
+        console.log(newString);
+    }
+    // doStuff();
+
+    function printMessage(message) {
+        var upperMessage = message.toUpperCase();
+        console.log(upperMessage);
+    }
+    printMessage('here is a function');
+
+    function addNums(num1,num2) {
+        var sum = num1 + num2;
+        console.log(sum);
+    }
+    addNums(1233,29737);
+
+    function returnSum(num1,num2) {
+        var sum = num1 + num2;
+        return sum;
+    }
+    console.log(returnSum(2,8));
+
+    // console.log(Math.random());
+
+    var foods = ['cheese', 'watermelon', 'apple', 'orange', 'pineapple', 'butter'];
+    function randomInt(min,max) {
+        // var numOfValues = max - min + 1;
+        // var randomNum = Math.random();
+        // var randomVal = randomNum * numOfValues;
+        // var roundedRandomVal = Math.round(randomVal);
+        // var finalNum = min + roundedRandomVal;
+        return Math.floor((max-min+1) * Math.random()) + min;
+    }
+    console.log(foods[randomInt(0,5)])
+
+    var greeting = function() {
+        console.log("Greetings");
+    }
+    greeting();
+
+
+</script>
+</body>
+</html>
