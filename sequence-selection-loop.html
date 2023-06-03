@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1>Working with Sequence, Selection and Loop</h1>
+<script>
+    var myString = "I am really hungry for some";
+    console.log(myString);
+    var myUpperString = myString.toUpperCase();
+    console.log(myUpperString);
+    // print the sequence name 
+    var reallyLocation = myString.search('really');
+    console.log(reallyLocation);
+    // print the location
+    var specialWord = myString.substr(reallyLocation, 6);
+    console.log(specialWord);
+    // print the special word
+    var specialLetter= myString.substring(reallyLocation, 6);
+    console.log(specialLetter);
+    // print the special letter
+    specialWord = specialWord.toUpperCase();
+    var newString = myString.replace('really', specialWord)
+    console.log(newString);
+    var foods = ['cheese', 'pie', 'breakfast', 'lunch'];
+    /*for (var i = 0; i < foods.length; i++) {
+        console.log(`${myString} ${foods[i]}.`);
+        }*/
+    for (var eachFood of foods) {
+        console.log(`${myString} ${eachFood}.`);
+    }
+    var foods = ['cheese', 'pie', 'breakfast', 'lunch'];
+    for (var i = 0; i < foods.length; i++) {
+        // checking to see if the incrementor is even
+        if (i%2=== 0) {
+            console.log(`${myString} ${foods[i].toUpperCase()}.`)
+        }
+        else{
+            console.log(`${myString} ${foods[i]}.`);
+        }
+        }
+
+</script>
+</body>
+</html>
